@@ -12,7 +12,7 @@ import ru.alina.task_tracker_v1.entity.RegRequest;
 import ru.alina.task_tracker_v1.service.AuthService;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthService authService;
