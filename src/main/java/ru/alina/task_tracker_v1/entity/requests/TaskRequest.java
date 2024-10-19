@@ -1,8 +1,9 @@
-package ru.alina.task_tracker_v1.entity;
+package ru.alina.task_tracker_v1.entity.requests;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import ru.alina.task_tracker_v1.entity.utils.TaskType;
 
 @Getter
 @Setter

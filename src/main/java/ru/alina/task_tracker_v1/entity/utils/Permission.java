@@ -1,4 +1,4 @@
-package ru.alina.task_tracker_v1.entity;
+package ru.alina.task_tracker_v1.entity.utils;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

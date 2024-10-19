@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.alina.task_tracker_v1.entity.Task;
-import ru.alina.task_tracker_v1.entity.TaskRequest;
+import ru.alina.task_tracker_v1.entity.requests.TaskRequest;
 import ru.alina.task_tracker_v1.service.TaskService;
 
 import java.util.List;
@@ -15,25 +15,35 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TaskController {
     private final TaskService taskService;
+
     @PostMapping()
     public ResponseEntity<?> add(@RequestBody TaskRequest taskRequest) {
         taskService.add(taskRequest);
         return ResponseEntity.accepted().build();
     }
+
     @GetMapping
     public ResponseEntity<List<Task>> getAllTasks() {
         return ResponseEntity.ok(taskService.findAll());
     }
+
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('admin:delete')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseEntity<?> deleteTask(@PathVariable Long id) {
         taskService.delete(id);
         return ResponseEntity.accepted().build();
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
         return ResponseEntity.ok(taskService.findById(id));
     }
 
+    @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseEntity<?> updateTask(@PathVariable Long id, @RequestBody TaskRequest taskRequest) {
+        taskService.updateTask(id, taskRequest);
+        return ResponseEntity.ok().build();
+    }
 
 }

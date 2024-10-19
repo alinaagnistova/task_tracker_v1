@@ -5,9 +5,9 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.alina.task_tracker_v1.entity.AuthRequest;
-import ru.alina.task_tracker_v1.entity.AuthResponse;
-import ru.alina.task_tracker_v1.entity.RegRequest;
+import ru.alina.task_tracker_v1.entity.requests.AuthRequest;
+import ru.alina.task_tracker_v1.entity.responses.AuthResponse;
+import ru.alina.task_tracker_v1.entity.requests.RegRequest;
 import ru.alina.task_tracker_v1.entity.User;
 import ru.alina.task_tracker_v1.repo.UserRepository;
 

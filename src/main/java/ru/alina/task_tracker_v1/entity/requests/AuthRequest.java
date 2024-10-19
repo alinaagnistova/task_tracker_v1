@@ -1,4 +1,4 @@
-package ru.alina.task_tracker_v1.entity;
+package ru.alina.task_tracker_v1.entity.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegRequest {
-    private String name;
+public class AuthRequest {
     private String email;
     private String password;
-    private Role role;
 }
+

@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.alina.task_tracker_v1.entity.AuthRequest;
-import ru.alina.task_tracker_v1.entity.AuthResponse;
-import ru.alina.task_tracker_v1.entity.RegRequest;
+import ru.alina.task_tracker_v1.entity.requests.AuthRequest;
+import ru.alina.task_tracker_v1.entity.responses.AuthResponse;
+import ru.alina.task_tracker_v1.entity.requests.RegRequest;
 import ru.alina.task_tracker_v1.service.AuthService;
 
 @RestController

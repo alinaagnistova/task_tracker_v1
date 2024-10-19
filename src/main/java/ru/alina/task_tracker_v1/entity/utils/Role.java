@@ -1,4 +1,4 @@
-package ru.alina.task_tracker_v1.entity;
+package ru.alina.task_tracker_v1.entity.utils;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static ru.alina.task_tracker_v1.entity.Permission.*;
+import static ru.alina.task_tracker_v1.entity.utils.Permission.*;
 
 @RequiredArgsConstructor
 public enum Role {
